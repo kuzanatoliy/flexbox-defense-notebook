@@ -1,6 +1,6 @@
 {
   "name": "flexbox-defence-notebook",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Solution list for flexboxdefense play",
   "main": "index.js",
   "scripts": {
