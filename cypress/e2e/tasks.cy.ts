@@ -8,12 +8,22 @@ describe('Flexbox Defence', () => {
 
   const testLevel = (levelNumber) => {
     cy.visit('http://www.flexboxdefense.com');
-    cy.get('.nav__button--selector').click({ force: true });
+    cy.get('body').then(($body) => {
+      if ($body.find('.modal__instructions').length) {
+        cy.get('.modal__button').contains('Ok, got it!').click();
+      }
+    });
+    cy.get('.nav__button--selector').click();
     cy.get('.menu__wave-link')
       .contains(levelNumber + 1)
       .click();
+    cy.get('body').then(($body) => {
+      if ($body.find('.modal__instructions').length) {
+        cy.get('.modal__button').contains('Ok, got it!').click();
+      }
+    });
     cy.get('.ember-text-field').type(levels[levelNumber].join('\n'));
-    //cy.get('stylesheet__start-wave-button').contains('Start Wave').click();
+    cy.get('.stylesheet__start-wave-button').contains('Start Wave').click();
     //cy.wait(10000);
     //cy.get('.modal__grade p').should(
     //  'contain',
@@ -21,7 +31,7 @@ describe('Flexbox Defence', () => {
     //);
   };
 
-  it.skip('Should validate first task', () => {
+  it('Should validate first task', () => {
     testLevel(0);
   });
 
