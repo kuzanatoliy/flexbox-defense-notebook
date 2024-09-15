@@ -1,17 +1,24 @@
 import { levels } from '../fixtures/levels';
 
-describe('Flexbox Froggy', () => {
-  it.skip('Should open page', () => {
-    cy.visit('https://flexboxfroggy.com');
-    cy.get('.title').should('contain', 'Flexbox Froggy');
+describe('Flexbox Defence', () => {
+  it('Should open page', () => {
+    cy.visit('http://www.flexboxdefense.com');
+    cy.get('.header__title').should('contain', 'Flexbox Defense');
   });
 
   const testLevel = (levelNumber) => {
-    cy.visit('https://flexboxfroggy.com');
-    cy.get('#level-indicator').click();
-    cy.get(`.level-marker[data-level="${levelNumber}"]`).click();
-    cy.get('#editor textarea').type(levels[levelNumber].join('\n'));
-    cy.get('#next').should('not.have.class', 'disabled');
+    cy.visit('http://www.flexboxdefense.com');
+    cy.get('.nav__button--selector').click({ force: true });
+    cy.get('.menu__wave-link')
+      .contains(levelNumber + 1)
+      .click();
+    cy.get('.ember-text-field').type(levels[levelNumber].join('\n'));
+    //cy.get('stylesheet__start-wave-button').contains('Start Wave').click();
+    //cy.wait(10000);
+    //cy.get('.modal__grade p').should(
+    //  'contain',
+    //  'Congratulations! You scored 100 points!'
+    //);
   };
 
   it.skip('Should validate first task', () => {
