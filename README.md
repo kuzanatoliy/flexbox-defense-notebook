@@ -1,6 +1,6 @@
-# flexbox-froggy-notebook
+# flexbox-defense-notebook
 
-List of [Flexbox froggy levels](https://flexboxfroggy.com/#ru)
+List of [Flexbox defense levels](http://www.flexboxdefense.com)
 
 **Note:** solution could be found [here](SOLUTIONS.md)
 
