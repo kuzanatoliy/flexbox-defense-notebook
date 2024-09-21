@@ -57,7 +57,7 @@ describe('Flexbox Defence', () => {
     testLevel(3);
   });
 
-  it.skip('Should validate fifth task', () => {
+  it('Should validate fifth task', () => {
     testLevel(4);
   });
 
