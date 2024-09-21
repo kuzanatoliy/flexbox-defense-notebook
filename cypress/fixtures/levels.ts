@@ -46,4 +46,12 @@ export const levels = [
     '',
     'order: -1;',
   ],
+  [
+    'justify-content: space-between;',
+    '',
+    'align-self: flex-end;',
+    '',
+    '',
+    'align-self: flex-end;',
+  ],
 ];
