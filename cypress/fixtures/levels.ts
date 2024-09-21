@@ -18,4 +18,5 @@ export const levels = [
     'justify-content: center;',
     'align-items: center;',
   ],
+  ['justify-content: space-between;', 'align-items: center;'],
 ];
