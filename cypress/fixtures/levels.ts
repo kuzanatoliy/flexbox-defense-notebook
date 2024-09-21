@@ -20,4 +20,10 @@ export const levels = [
   ],
   ['justify-content: space-between;', 'align-items: center;'],
   ['flex-direction: column;', '', 'flex-direction: column;'],
+  [
+    'flex-direction: column;',
+    '',
+    'flex-direction: column;',
+    'align-items: center;',
+  ],
 ];
