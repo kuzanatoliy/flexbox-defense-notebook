@@ -26,4 +26,12 @@ export const levels = [
     'flex-direction: column;',
     'align-items: center;',
   ],
+  [
+    'justify-content: space-around;',
+    'flex-direction: row-reverse;',
+    '',
+    'justify-content: space-around;',
+    'flex-direction: row-reverse;',
+    'align-items: center;',
+  ],
 ];

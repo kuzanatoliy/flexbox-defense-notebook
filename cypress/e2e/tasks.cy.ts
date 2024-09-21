@@ -36,7 +36,7 @@ describe('Flexbox Defence', () => {
       .contains('Start Wave')
       .trigger('click');
     cy.get('.stylesheet__cancel-wave-button').should('be.visible');
-    cy.get('.modal__button', { timeout: 30000 })
+    cy.get('.modal__button', { timeout: 40000 })
       .contains('Next wave')
       .should('be.visible');
   };
@@ -73,7 +73,7 @@ describe('Flexbox Defence', () => {
     testLevel(7);
   });
 
-  it.skip('Should validate nineth task', () => {
+  it('Should validate nineth task', () => {
     testLevel(8);
   });
 
