@@ -26,7 +26,6 @@ describe('Flexbox Defence', () => {
     cy.get('.ember-text-field').eq(0).blur();
     for (let j = 1; j < levels[levelNumber].length; j++) {
       if (!levels[levelNumber][j]) {
-        cy.get('.ember-text-field').eq(j).blur();
         continue;
       }
       cy.get('.ember-text-field').eq(j).type(levels[levelNumber][j]);
@@ -36,8 +35,8 @@ describe('Flexbox Defence', () => {
       .contains('Start Wave')
       .trigger('click');
     cy.get('.stylesheet__cancel-wave-button').should('be.visible');
-    cy.get('.modal__button', { timeout: 60000 })
-      .contains('Next wave')
+    cy.get('.modal__grade p', { timeout: 60000 })
+      .contains('Congratulations! You scored 100 points!')
       .should('be.visible');
   };
 
