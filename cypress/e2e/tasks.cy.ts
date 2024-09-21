@@ -23,12 +23,13 @@ describe('Flexbox Defence', () => {
       }
     });
     cy.get('.ember-text-field').type(levels[levelNumber].join('\n'));
-    cy.get('.stylesheet__start-wave-button').contains('Start Wave').click();
-    //cy.wait(10000);
-    //cy.get('.modal__grade p').should(
-    //  'contain',
-    //  'Congratulations! You scored 100 points!'
-    //);
+    cy.get('.stylesheet__start-wave-button')
+      .contains('Start Wave')
+      .trigger('click');
+    cy.get('.stylesheet__cancel-wave-button').should('be.visible');
+    cy.get('.modal__button', { timeout: 30000 })
+      .contains('Next wave')
+      .should('be.visible');
   };
 
   it('Should validate first task', () => {
