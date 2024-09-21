@@ -22,7 +22,16 @@ describe('Flexbox Defence', () => {
         cy.get('.modal__button').contains('Ok, got it!').click();
       }
     });
-    cy.get('.ember-text-field').type(levels[levelNumber].join('\n'));
+    cy.get('.ember-text-field').eq(0).type(levels[levelNumber][0]);
+    cy.get('.ember-text-field').eq(0).blur();
+    for (let j = 1; j < levels[levelNumber].length; j++) {
+      if (!levels[levelNumber][j]) {
+        cy.get('.ember-text-field').eq(j).blur();
+        continue;
+      }
+      cy.get('.ember-text-field').eq(j).type(levels[levelNumber][j]);
+      cy.get('.ember-text-field').eq(j).blur();
+    }
     cy.get('.stylesheet__start-wave-button')
       .contains('Start Wave')
       .trigger('click');
@@ -36,7 +45,7 @@ describe('Flexbox Defence', () => {
     testLevel(0);
   });
 
-  it.skip('Should validate second task', () => {
+  it('Should validate second task', () => {
     testLevel(1);
   });
 
