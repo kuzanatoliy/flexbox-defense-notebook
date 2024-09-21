@@ -19,4 +19,5 @@ export const levels = [
     'align-items: center;',
   ],
   ['justify-content: space-between;', 'align-items: center;'],
+  ['flex-direction: column;', '', 'flex-direction: column;'],
 ];
