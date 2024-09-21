@@ -54,4 +54,16 @@ export const levels = [
     '',
     'align-self: flex-end;',
   ],
+  [
+    'justify-content: space-between;',
+    'align-items: center;',
+    '',
+    'align-self: flex-start;',
+    '',
+    'order: 1;',
+    '',
+    '',
+    'order: 1;',
+    'align-self: flex-end;',
+  ],
 ];

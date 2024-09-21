@@ -36,7 +36,7 @@ describe('Flexbox Defence', () => {
       .contains('Start Wave')
       .trigger('click');
     cy.get('.stylesheet__cancel-wave-button').should('be.visible');
-    cy.get('.modal__button', { timeout: 50000 })
+    cy.get('.modal__button', { timeout: 60000 })
       .contains('Next wave')
       .should('be.visible');
   };
@@ -85,55 +85,7 @@ describe('Flexbox Defence', () => {
     testLevel(10);
   });
 
-  it.skip('Should validate twelfth task', () => {
+  it('Should validate twelfth task', () => {
     testLevel(11);
-  });
-
-  it.skip('Should validate thirteenth task', () => {
-    testLevel(12);
-  });
-
-  it.skip('Should validate forteenth task', () => {
-    testLevel(13);
-  });
-
-  it.skip('Should validate fifteenth task', () => {
-    testLevel(14);
-  });
-
-  it.skip('Should validate sixteenth task', () => {
-    testLevel(15);
-  });
-
-  it.skip('Should validate seventeenth task', () => {
-    testLevel(16);
-  });
-
-  it.skip('Should validate eighteenth task', () => {
-    testLevel(17);
-  });
-
-  it.skip('Should validate nineteenth task', () => {
-    testLevel(18);
-  });
-
-  it.skip('Should validate twentyth task', () => {
-    testLevel(19);
-  });
-
-  it.skip('Should validate twenty first task', () => {
-    testLevel(20);
-  });
-
-  it.skip('Should validate twenty second task', () => {
-    testLevel(21);
-  });
-
-  it.skip('Should validate twenty third task', () => {
-    testLevel(22);
-  });
-
-  it.skip('Should validate twenty fourth task', () => {
-    testLevel(23);
   });
 });
