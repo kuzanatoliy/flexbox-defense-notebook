@@ -2,7 +2,7 @@ name: e2e
 on: workflow_dispatch
 jobs:
   pipeline:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     strategy:
       matrix:
         node-version: [20.x]
